@@ -3726,8 +3726,8 @@ textarea.form-control-lg {
 }
 
 .nav {
-  --bs-nav-link-padding-x: 1rem;
-  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -3866,13 +3866,13 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-active-color: white;
+  --bs-navbar-brand-padding-y: -0.1875rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-nav-link-padding-x: 0.5rem;
+  --bs-navbar-brand-color: white;
+  --bs-navbar-brand-hover-color: white;
+  --bs-navbar-nav-link-padding-x: 0;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
@@ -3915,7 +3915,7 @@ textarea.form-control-lg {
 
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
-  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-y: 0;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
@@ -3934,8 +3934,8 @@ textarea.form-control-lg {
 }
 
 .navbar-text {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
   color: var(--bs-navbar-color);
 }
 .navbar-text a,
@@ -20078,6 +20078,93 @@ textarea.form-control-lg {
 
 .bi-vignette::before {
   content: "賈";
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("./../../src/assets/fonts"), local("Montserrat-Regular"), url("./../../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradient {
+  background: Linear-gradient(229deg, #323264 11.93%, #323264 51.17%, #643E72 87.46%);
+}
+
+.banner {
+  padding-top: 150px;
+}
+
+.header {
+  padding-top: 50px;
+  position: absolute;
+  width: 100%;
+}
+.header .services {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+}
+.header-top {
+  margin-bottom: -30px;
+}
+.header-top__wrapper > div:not(:last-child) {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+.header-top__wrapper > div:not(:last-child):after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: white;
+  margin-left: 6px;
+}
+.header-top__lang-title {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+.header-top__lang input:checked + span {
+  background: red;
+}
+.header .navbar-nav {
+  margin-bottom: -30px;
+}
+.header .navbar-nav a {
+  color: white;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding-top: 0;
+  }
+  .header-top {
+    margin: 0 0 15px 0;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .header-top__wrapper {
+    justify-content: space-between !important;
+  }
+  .header-top__wrapper > div:after {
+    display: none !important;
+  }
+  .header-top__address, .header-top__socials {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=home-page.css.map */
